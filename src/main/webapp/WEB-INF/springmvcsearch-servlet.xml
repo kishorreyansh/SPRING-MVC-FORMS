@@ -11,6 +11,13 @@
            				
     <context:component-scan base-package="springmvcforms"/>
     <mvc:annotation-driven/>
+    <!--  <mvc:interceptors>
+	    <mvc:interceptor>
+	        <mvc:mapping path="/handleinterceptor" />
+	        <bean class="springmvcforms.MyInterceptor" />
+	    </mvc:interceptor>
+	</mvc:interceptors>-->
+    
     <!--  <mvc:resources location="/WEB-INF/resources/" mapping="/resources/**" />-->
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
