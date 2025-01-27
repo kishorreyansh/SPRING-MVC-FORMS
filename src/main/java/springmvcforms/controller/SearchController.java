@@ -1,6 +1,7 @@
 package springmvcforms.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.view.RedirectView;
@@ -11,6 +12,13 @@ public class SearchController {
 	@RequestMapping("/home")
 	public String home() {
 		System.out.println("Home Invoked");
+		return "home";
+	}
+	
+	@RequestMapping("/user/{userId}")
+	public String userDetails(@PathVariable("userId") int userId) {
+		System.out.println("Implementing Using Path Variable");
+		System.out.println("Path Variable userId: "+userId);
 		return "home";
 	}
 	
